@@ -1,1 +1,7 @@
 // minidoc
+
+// bonus install
+    *npm i json-server
+
+//create new script in package.json
+// create new directory called db/db.json
