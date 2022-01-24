@@ -2,7 +2,7 @@
   <div>
     <p>compo de msg</p>
     <div>
-      <form id="burger-form">
+      <form id="burger-form" @submit="createBurger">
         <div class="input-container">
           <label for="nome">Nome cliente</label>
           <input
@@ -24,7 +24,7 @@
           <label for="carne">Escolha a carne</label>
           <select name="carne" id="carneId" v-model="carnex">
             <option value="">Selecione a carne</option>
-            <option v-for="carne in carnes" :key="carne.id" value="carne.tipo">{{carne.tipo}}</option>
+            <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">{{carne.tipo}}</option>
           </select>
         </div>
         <div class="input-container" id="opcionais-container">
@@ -32,12 +32,7 @@
             >Escolha os opcionais</label
           >
           <div class="checkbox-container" v-for="opcional in opcionaisdata" :key="opcional.id">
-            <input
-              type="checkbox"
-              name="opcionais"
-              v-model="opcionaisx"
-              :value="opcional.tipo"
-            />
+            <input type="checkbox" name="opcionais" v-model="opcionaisx" :value="opcional.tipo"/>
             <span>{{opcional.tipo}}</span>
           </div>
         </div>
@@ -57,6 +52,7 @@ export default {
       paos: null,
       carnes: null,
       opcionaisdata: null,
+
       nome: null,
       pao: null,
       carne: null,
@@ -75,6 +71,41 @@ export default {
           this.opcionaisdata = data.opcionais
 
            console.log(data);
+      },
+      async createBurger(e){
+        e.preventDefault()
+        //console.log("Fez o hambirger");
+
+        //pega data desde v-model
+        const data = {
+          nome: this.nomex,
+          carne: this.carnex,
+          pao: this.paox,
+          opcionais: this.opcionaisx,
+          status: "Solicitado"
+        }
+        //console.log(data);
+        
+
+        //envia ao servidor dados desde o form, com fomrato json
+        const dataJson = JSON.stringify(data)
+        const req = await fetch("http://localhost:3000/burgers", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: dataJson
+        })
+
+        const res = await req.json()
+        console.log(res);
+        //msg sistema
+
+        //limpar msg
+
+        //limpar campos
+        this.nome = ""
+        this.carne = ""
+        this.pao = ""
+        this.opcionais = ""
       }
   },
   mounted(){ // aka onload
@@ -109,6 +140,7 @@ select {
 }
 
 #opcionais-container {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }

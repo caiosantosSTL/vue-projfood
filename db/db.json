@@ -1,74 +1,106 @@
 {
-    "ingredientes":{
-        "paes":[
-            { 
-                "id":1,
-                "tipo": "Italiano branco"
-            },
-            { 
-                "id":2,
-                "tipo": "4 queijos"
-            },
-            { 
-                "id":3,
-                "tipo": "Napolitano"
-            },
-            { 
-                "id":4,
-                "tipo": "Integral"
-            }
-        ],
-        "carnes":[
-            { 
-                "id":1,
-                "tipo": "Picanha"
-            },
-            { 
-                "id":2,
-                "tipo": "Frango"
-            },
-            { 
-                "id":3,
-                "tipo": "Peixe"
-            },
-            { 
-                "id":4,
-                "tipo": "Porco"
-            }
-        ],
-        "opcionais":[
-            { 
-                "id":1,
-                "tipo": "Salame"
-            },
-            { 
-                "id":2,
-                "tipo": "Presunto"
-            },
-            { 
-                "id":3,
-                "tipo": "Bacon"
-            },
-            { 
-                "id":4,
-                "tipo": "Papas"
-            }
-        ]
-        
-    },
-    "status":[
-        { 
-            "id":1,
-            "tipo": "Solicitado"
-        },
-        { 
-            "id":2,
-            "tipo": "Em producao"
-        },
-        { 
-            "id":3,
-            "tipo": "Terminado"
-        }
+  "ingredientes": {
+    "paes": [
+      {
+        "id": 1,
+        "tipo": "Italiano branco"
+      },
+      {
+        "id": 2,
+        "tipo": "4 queijos"
+      },
+      {
+        "id": 3,
+        "tipo": "Napolitano"
+      },
+      {
+        "id": 4,
+        "tipo": "Integral"
+      }
     ],
-    "burgers":[]
+    "carnes": [
+      {
+        "id": 1,
+        "tipo": "Picanha"
+      },
+      {
+        "id": 2,
+        "tipo": "Frango"
+      },
+      {
+        "id": 3,
+        "tipo": "Peixe"
+      },
+      {
+        "id": 4,
+        "tipo": "Porco"
+      }
+    ],
+    "opcionais": [
+      {
+        "id": 1,
+        "tipo": "Salame"
+      },
+      {
+        "id": 2,
+        "tipo": "Presunto"
+      },
+      {
+        "id": 3,
+        "tipo": "Bacon"
+      },
+      {
+        "id": 4,
+        "tipo": "Papas"
+      }
+    ]
+  },
+  "status": [
+    {
+      "id": 1,
+      "tipo": "Solicitado"
+    },
+    {
+      "id": 2,
+      "tipo": "Em producao"
+    },
+    {
+      "id": 3,
+      "tipo": "Terminado"
+    }
+  ],
+  "burgers": [
+    {
+      "nome": "Nika",
+      "carne": "Frango",
+      "pao": "Italiano branco",
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "nome": "Tunim",
+      "carne": "Frango",
+      "pao": "Napolitano",
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "nome": "Tino",
+      "carne": "Picanha",
+      "pao": "4 queijos",
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 3
+    },
+    {
+      "nome": "Vana",
+      "carne": "Peixe",
+      "pao": "Italiano branco",
+      "opcionais": true,
+      "status": "Solicitado",
+      "id": 4
+    }
+  ]
 }
