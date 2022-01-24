@@ -71,36 +71,36 @@
   ],
   "burgers": [
     {
-      "nome": "Nika",
-      "carne": "Frango",
+      "nome": "as",
+      "carne": "Picanha",
       "pao": "Italiano branco",
-      "opcionais": [],
+      "opcionais": [
+        "Presunto"
+      ],
       "status": "Solicitado",
       "id": 1
     },
     {
-      "nome": "Tunim",
-      "carne": "Frango",
-      "pao": "Napolitano",
-      "opcionais": [],
+      "nome": "Tuna",
+      "carne": "Porco",
+      "pao": "Italiano branco",
+      "opcionais": [
+        "Presunto",
+        "Bacon"
+      ],
       "status": "Solicitado",
       "id": 2
     },
     {
-      "nome": "Tino",
+      "nome": "Lirana",
       "carne": "Picanha",
-      "pao": "4 queijos",
-      "opcionais": [],
+      "pao": "Napolitano",
+      "opcionais": [
+        "Salame",
+        "Papas"
+      ],
       "status": "Solicitado",
       "id": 3
-    },
-    {
-      "nome": "Vana",
-      "carne": "Peixe",
-      "pao": "Italiano branco",
-      "opcionais": true,
-      "status": "Solicitado",
-      "id": 4
     }
   ]
 }
